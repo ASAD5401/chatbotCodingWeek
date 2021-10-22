@@ -17,6 +17,35 @@ for(var i=string.length-1;i>=0;i--){
 }
 console.log(arr.join(''))
 
+// task 6
+for(let i=2014;i<=2050;i++){
+    var date=new Date(i,1-1,1)
+    var day=date.getDay()
+    if(day==0){
+        console.log(`On first januray of ${i} day is sunday `)
+    }
+}
+
+// task 10
+function task10(){
+    var celsius=Number(document.getElementById('celsius').value)
+    var farhenheit=Number(document.getElementById('farhenheit').value)
+    var cal =document.getElementById('celsius')
+    var far=document.getElementById('farhenheit')
+    if(farhenheit!=0){
+        console.log("far",farhenheit)
+        var result=(farhenheit-32)*5/9
+        cal.value=result
+        console.log(celsius)
+    }
+    else if(celsius!=0){
+        var result=(9*(celsius/5))+32
+        far.value=result
+        console.log(farhenheit)
+    
+    }
+    
+}
 
 
 // task 12
@@ -67,5 +96,15 @@ function task18(){
     console.log(sortedArray)
     console.log(sortedArray[kth-1])
 }
-
+// task 20
+var num=[1,2,3,4,2,5,6,7,2,4,2]
+console.log(num)
+var replaceIt=2
+var replaceBy=5
+for(let i=0;i<num.length;i++){
+    if(num[i]==replaceIt){
+        num[i]=replaceBy
+    }
+}
+console.log(num)
 
